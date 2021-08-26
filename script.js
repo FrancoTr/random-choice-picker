@@ -42,3 +42,11 @@ function pickRandomTag() {
   const tags = document.querySelectorAll(".tag");
   return tags[Math.floor(Math.random() * tags.length)]; //random tag
 }
+
+function highlightTag(tag) {
+  tag.classList.add("highlight");
+}
+
+function unHighlightTag(tag) {
+  tag.classList.remove("highlight");
+}
