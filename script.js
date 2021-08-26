@@ -35,6 +35,12 @@ function randomSelect() {
   const times = 30; //number of times an element is highlighted
   const interval = setInterval(() => {
     const randomTag = pickRandomTag();
+    highlightTag(randomTag);
+
+    setTimeout(() => {
+      //waits 100ms and unhighlight the random tag
+      unHighlightTag(randomTag);
+    }, 100);
   }, 100);
 }
 
