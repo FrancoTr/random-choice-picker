@@ -42,6 +42,15 @@ function randomSelect() {
       unHighlightTag(randomTag);
     }, 100);
   }, 100);
+
+  setTimeout(() => {
+    clearInterval(interval); //stops the random shuffle
+
+    setTimeout(() => {
+      const randomTag = pickRandomTag(); //selects the last random tag
+      highlightTag(randomTag);
+    }, 100);
+  }, times * 100);
 }
 
 function pickRandomTag() {
