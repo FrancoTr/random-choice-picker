@@ -30,3 +30,7 @@ function createTags(input) {
     tagsEl.appendChild(tagEl); //adds individual tags to the tags element
   });
 }
+
+function randomSelect() {
+  console.log("testasdasdasd");
+}
