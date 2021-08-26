@@ -5,6 +5,14 @@ textArea.focus(); //automatically focus on the textarea
 
 textArea.addEventListener("keyup", (e) => {
   createTags(e.target.value);
+
+  if (e.key === "Enter") {
+    //it clears the input after 10ms
+    setTimeout(() => {
+      e.target.value - "";
+    }, 10);
+    randomSelect();
+  }
 });
 
 function createTags(input) {
