@@ -32,5 +32,13 @@ function createTags(input) {
 }
 
 function randomSelect() {
-  console.log("testasdasdasd");
+  const times = 30; //number of times an element is highlighted
+  const interval = setInterval(() => {
+    const randomTag = pickRandomTag();
+  }, 100);
+}
+
+function pickRandomTag() {
+  const tags = document.querySelectorAll(".tag");
+  return tags[Math.floor(Math.random() * tags.length)]; //random tag
 }
